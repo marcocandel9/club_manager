@@ -1,0 +1,9 @@
+<config>
+    <db>
+        <uri>mongodb://localhost:27017</uri>
+        <dbname>ClubDatabase</dbname>
+    </db>
+    <server>
+        <port>12345</port>
+    </server>
+</config>
