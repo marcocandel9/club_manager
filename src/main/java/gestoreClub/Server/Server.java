@@ -41,7 +41,7 @@ public class Server {
         Thread thread;
 
         serverSocket = new ServerSocket(port);
-        GestoreDB gestoreDB = new GestoreDB(uri,dbname); //verrà integrato con la quary connessione al database corretta
+        GestoreDB gestoreDB = new GestoreDB(uri,dbname);
 
 
         while(!esci){

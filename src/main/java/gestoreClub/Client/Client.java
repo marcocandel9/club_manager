@@ -6,7 +6,10 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
+
 public class Client {
+
+
 
     private static final String CLOSE = "!"; //Carattere che indica al client di voler chiudere la connessione
     private static final String ASK = "?"; // //carattere che indica al client di volere una risposta
@@ -49,7 +52,7 @@ public class Client {
                 rispostaClient = input.nextLine();
                 out.println(rispostaClient);
             }
-            else //devo stampare la domanda
+            else //stampo la domanda
                 System.out.println(domandaServer);
         }
         //chiusura comunicazione

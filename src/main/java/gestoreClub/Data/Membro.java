@@ -5,30 +5,15 @@ import java.time.LocalDate;
 
 public class Membro extends Persona{
 
-    LocalDate dataInizioIscrizione;
-    LocalDate dataFineIscrizione;
+    private LocalDate dataInizioIscrizione;
+    private LocalDate dataFineIscrizione;
 
-    //il costruttore Membro utilizza il costruttore della classe padre Persona, l'object ID per caricamento su DB è istanziato.
 
-    public Membro(String nome, String cognome, int eta) {
-        super(nome, cognome, eta);
-        this.dataInizioIscrizione = LocalDate.now();
-        this.dataFineIscrizione = this.dataInizioIscrizione.plusYears(1);
 
-    }
+    // Il costruttore di Membro invoca il costruttore della classe padre, Persona, e inizializza le date di iscrizione.
 
-    //Costruttore membro che richiama il costruttore padre persona con parametro ObjectID per caricamento da DB.
-
-    public Membro(ObjectId id, String nome, String cognome, int eta, String email, String phoneNum) {
-        super(id, nome, cognome, eta,email,phoneNum);
-        this.dataInizioIscrizione = LocalDate.now();
-        this.dataFineIscrizione = this.dataInizioIscrizione.plusYears(1);
-
-    }
-
-    //Overload della classe membro rispetto quella Padre
-    public Membro(String nome, String cognome,int eta, String email, String phoneNum) {
-        super( nome, cognome, eta, email, phoneNum);
+    public Membro(String fiscalCodeId, String nome, String cognome, int eta, String email, String phoneNum) {
+        super(fiscalCodeId, nome, cognome, eta,email,phoneNum);
         this.dataInizioIscrizione = LocalDate.now();
         this.dataFineIscrizione = this.dataInizioIscrizione.plusYears(1);
 
@@ -37,15 +22,12 @@ public class Membro extends Persona{
     public LocalDate getDataInizioIscrizione() {
         return dataInizioIscrizione;
     }
-
     public void setDataInizioIscrizione(LocalDate dataInizioIscrizione) {
         this.dataInizioIscrizione = dataInizioIscrizione;
     }
-
     public LocalDate getDataFineIscrizione() {
         return dataFineIscrizione;
     }
-
     public void setDataFineIscrizione(LocalDate dataFineIscrizione) {
         this.dataFineIscrizione = dataFineIscrizione;
     }
